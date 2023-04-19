@@ -20,7 +20,6 @@ def expiry_calc():
     day = 31 if month == 12 else (datetime.date(year, month+1, 1) - datetime.timedelta(days=1)).day
     expiry_dt = datetime.date(year, month, day)
     print(f"\nExpiry date: \033[94m{expiry_dt.strftime('%y%m%d')}\033[0m")
-    print(f"\nExpiry date: \033[94m{expiry_dt.strftime('%y/%m/%d')}\033[0m")
     
     try:
         input('\nPress [ENTER] to calculate another expiry date...'); expiry_calc()
